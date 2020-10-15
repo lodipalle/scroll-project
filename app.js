@@ -44,6 +44,11 @@ scrollLinks.forEach(function (link) {
     const id = e.currentTarget.getAttribute("href").slice(1);
     const element = document.getElementById(id);
     let position = element.offsetTop;
+    window.scrollTo({
+      left: 0,
+      top: position,
+    });
+    linksContainer.style.height = 0;
   });
 });
 
